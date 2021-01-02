@@ -24,7 +24,7 @@ func main(){
 	router.HandleFunc("/login",controller.Login(db)).Methods("Post")
 	router.HandleFunc("/protected",controller.TokenVerifyMiddleWare(controller.ProtectedEndPoint())).Methods("Get")
 
-	log.Println("Listening on port 8000")
+	//log.Println("Listening on port 8000")
 	log.Fatal(http.ListenAndServe(":8000",router))
 }
 
